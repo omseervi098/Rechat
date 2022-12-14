@@ -11,13 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.loginpage {
+.App {
+  height: 100vh !important;
+  width: 100vw !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  color: white;
+  align-items: center;
+}
+/* Login Page */
+.loginpage {
+  background-color: #000000a2;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 .loginpage input {
   background-color: #bbbdbd49;
@@ -31,4 +40,296 @@ code {
   outline: none;
   background-color: #bbbdbd49;
   color: white;
+}
+/* Layout Page */
+.layout {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0px !important;
+}
+.layout > .container {
+  height: 80%;
+  width: 80%;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0px;
+  background-color: #f7f7f7a2;
+  display: flex;
+  overflow: hidden;
+}
+.layout .sidebar {
+  flex: 1;
+  border-right: 1px solid rgb(12, 12, 12);
+  height: 100%;
+  background-color: rgba(39, 3, 117, 0.849);
+}
+.chat {
+  flex: 2;
+}
+.sidebar > .navbar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(1, 1, 81, 0.879);
+  height: 50px;
+  padding: 10px;
+  justify-content: space-between;
+  color: white;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+.user {
+  display: flex;
+  gap: 10px;
+}
+.user > img {
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user > button {
+  background-color: rgb(0, 0, 59);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sidebar > .search {
+  border-bottom: 1px solid rgb(12, 12, 12);
+}
+.search > .search_container {
+  padding: 10px;
+}
+.search_container > input {
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+}
+.search_container > input::placeholder {
+  color: lightgrey;
+}
+.userChat {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+}
+.userChat:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.userChat img {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userChatInfo {
+  display: flex;
+  flex-direction: column;
+}
+.userChatInfo > span:nth-child(odd) {
+  font-size: 1.2rem;
+}
+.userChatInfo > span:nth-child(even) {
+  font-size: 0.8rem;
+  color: lightgrey;
+}
+.chat .chatInfo {
+  height: 50px;
+  background-color: rgb(1, 1, 79);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+}
+.chatInfo > span {
+  font-size: 1.2rem;
+}
+.chatIcon i {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+.chat .chatIcons {
+  display: flex;
+
+  gap: 10px;
+}
+.messages {
+  padding: 10px;
+  height: calc(100% - 50px - 50px);
+  overflow: scroll;
+}
+.send-message {
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.send-message > input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+}
+.send-message-icon i {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+}
+.send-message-icon > button,
+.send-message-icon > label,
+.send-message-icon > div {
+  background-color: rgb(4, 4, 91);
+  color: white;
+  border-radius: 50%;
+  border: none;
+  height: 35px;
+  width: 35px;
+  outline: none;
+  padding: 5px;
+}
+.send-message-icon > button > i,
+.send-message-icon > label > i,
+.send-message-icon > div > i {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.send-message-icon > button:hover,
+.send-message-icon > label:hover,
+.send-message-icon > div:hover {
+  background-color: rgb(0, 0, 59);
+}
+.send-message-icon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.messages > .message {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.messageInfo {
+  display: flex;
+  flex-direction: column;
+  color: grey;
+  font-weight: 400;
+}
+.messageInfo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.messageText {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.messageText p {
+  background-color: rgb(1, 1, 79);
+  color: white;
+  padding: 10px;
+  border-radius: 0px 10px 10px 10px;
+  font-size: 1.1rem;
+  max-width: max-content;
+}
+.messageText img {
+  width: 50%;
+}
+.owner {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.owner .messageText {
+  align-items: flex-end;
+}
+.owner p {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 10px;
+  border-radius: 10px 0px 10px 10px;
+  font-size: 1.1rem;
+}
+/* laptop */
+@media screen and (max-width: 1200px) {
+}
+/* tablet */
+@media screen and (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .sidebar {
+    width: 50px;
+  }
+  .navbar span {
+    display: none;
+  }
+  .messageInfo img {
+    height: 45px;
+    width: 45px;
+  }
+  .messageInfo span {
+    font-size: 0.8rem;
+  }
+  .userChat img {
+    height: 45px;
+    width: 45px;
+  }
+  .messageText p {
+    font-size: 0.8rem;
+  }
+}
+/* mobile */
+@media screen and (max-width: 600px) {
+  .sidebar {
+    max-width: fit-content;
+  }
+  .userChatInfo {
+    display: none;
+  }
+  .messageText p {
+    font-size: 0.8rem;
+  }
+  .messageInfo img {
+    height: 40px;
+    width: 40px;
+  }
+  .messageInfo span {
+    font-size: 0.8rem;
+  }
+  .userChat img {
+    height: 40px;
+    width: 40px;
+  }
+  .navbar span {
+    display: none;
+  }
+  .sidebar {
+    position: relative;
+  }
+  .navbar button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
