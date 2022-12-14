@@ -1,15 +1,15 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
 function Login(props) {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+  };
   return (
     <div className="loginpage p-4 col-8 col-md-7 col-lg-5">
-      <form
-        className="loginform w-100"
-        onSubmit={(e) => {
-          e.preventDefault();
-          const email = e.target.email.value;
-          const password = e.target.password.value;
-          props.login(email, password);
-        }}
-      >
+      <form className="loginform w-100" onSubmit={handleSubmit}>
         <div className="row mb-3">
           <label
             htmlFor="inputEmail3"

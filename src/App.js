@@ -7,28 +7,6 @@ import Login from "./pages/Login";
 import userData from "./components/dummy";
 
 function App() {
-  const [user, setUser] = useState(null);
-  const [users, setUsers] = useState(userData);
-
-  const matchUser = (email, password) => {
-    const user = users.find(
-      (user) => user.email === email && user.password === password
-    );
-    return user === undefined ? false : user;
-  };
-  //Login
-  const login = (email, password) => {
-    const user = matchUser(email, password);
-    if (user) {
-      setUser(user);
-      alert("Login Successful");
-      //navigate to chat with props as user
-      console.log(user);
-      window.location.href = "/chat";
-    } else {
-      alert("Invalid Credentials");
-    }
-  };
   return (
     <div className="App">
       <div className="background">
@@ -48,8 +26,8 @@ function App() {
       </div>
       <BrowserRouter>
         <Routes>
-          <Route index path="/" element={<Login login={login} />} />
-          <Route path="/chat" element={<Layout user={user} />} />
+          <Route index path="/" element={<Login />} />
+          <Route path="/chat" element={<Layout />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
