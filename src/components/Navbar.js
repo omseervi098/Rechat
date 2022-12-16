@@ -1,14 +1,26 @@
-function Navbar() {
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
+import { useContext } from "react";
+import { AuthContext } from "../context/Auth";
+import { ChatContext } from "../context/Chat";
+function Navbar(props) {
+  const { currentUser } = useContext(AuthContext);
+  const { dispatch } = useContext(ChatContext);
   return (
     <div className="navbar">
       <span className="logo">ReChat</span>
       <div className="user">
-        <img
-          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-          alt=""
-        />
-        <span>Cleo</span>
-        <button>Logout</button>
+        <img src={currentUser.photoURL} alt="" />
+        <span>{currentUser.displayName}</span>
+        <button
+          onClick={() => {
+            auth.signOut();
+            dispatch({ type: "LOGOUT" });
+          }}
+        >
+          <span>Logout</span>
+          <i className="fas fa-sign-out-alt"></i>
+        </button>
       </div>
     </div>
   );
