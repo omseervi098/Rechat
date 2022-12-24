@@ -2,25 +2,6 @@
 
 - Chat Application using ReactJS and Firebase
 
-<<<<<<< HEAD
-
-## Login
-
-To login
-try email :
-
-- `test1@gmail.com`
-- `test2@gmail.com`
-- `test3@gmail.com`
-- `test4@gmail.com`
-- `test5@gmail.com`
-  and password as `123456`
-
-## Tech Stack
-
-- **Client:** ReactJS, Redux , Hooks
-- # **Database:** Firebase
-
 ## How to login ?
 
 To login
@@ -57,8 +38,6 @@ try email :
 
 - **Client:** ReactJS, Redux , Hooks
 - **Database:** Firebase
-
-> > > > > > > 8c422f785cca41aa50c43162c6d65ed61aaee7b0
 
 ## Deployment
 
