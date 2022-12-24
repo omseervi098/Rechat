@@ -29,7 +29,7 @@ try email :
         - `Search.js` component consist of searchbar to search a user and start a conversation
         - `Chats.js` component consist of conversation of current loggedin user
       - `Chat.js` Component
-        - `Messages.js` component consist of message field
+        - `Messages.js` component consist of all messages
         - `Input.js` component consist of input box and send message btn
     - `Login.js` for Login page
 
