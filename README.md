@@ -2,12 +2,7 @@
 # ReChat 
 - Chat Application using ReactJS and Firebase
 
-
-
-
-
-
-## Login
+## How to login ?
 
 To login
 try email :
@@ -18,18 +13,30 @@ try email :
 - `test4@gmail.com` Name: Ryan
 - `test5@gmail.com` Name: Alice
   and password as `123456`
-
-
+  
 ## How it is stored on Database ?
 
 - `users` to store detail of each user `{displayName,email,photoURL,uniqueID}`
 - `userChats` to store detail of each user conversation with other user  `uid=[{combinedID,date,userInfo={displayName,photoURL,uid}}]`
 - `chats` to store text messages between two users `combinedID={messages=[{text,SenderID,date}]}`
+
+## Folder Structure ?
+- ```App.js``` as Main Component
+  - pages 
+    - `Layout.js` for dashboard page
+      - `Sidebar.js` Component 
+        - `Navbar.js` component consist of logout and current loggedin user img
+        - `Search.js` component consist of searchbar to search a user and start a conversation
+        - `Chats.js` component consist of conversation of current loggedin user
+      - `Chat.js` Component
+        - `Messages.js` component consist of message field
+        - `Input.js` component consist of input box and send message btn
+    - `Login.js` for Login page
+
 ## Tech Stack
 
 * **Client:** ReactJS, Redux , Hooks
 * **Database:** Firebase
-
 
 
 ## Deployment
