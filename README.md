@@ -1,35 +1,23 @@
+# ReChat
 
-# ReChat 
 - Chat Application using ReactJS and Firebase
-
-
-
-
-
-
 
 ## Login
 
-To login 
+To login
 try email :
-*  ```test1@gmail.com```
-*  ```test2@gmail.com```
-*  ```test3@gmail.com```
-*  ```test4@gmail.com```
-*  ```test5@gmail.com```
-and password as ```123456```
 
-
-
-
-
+- `test1@gmail.com`
+- `test2@gmail.com`
+- `test3@gmail.com`
+- `test4@gmail.com`
+- `test5@gmail.com`
+  and password as `123456`
 
 ## Tech Stack
 
-* **Client:** ReactJS, Redux , Hooks
-* **Database:** Firebase
-
-
+- **Client:** ReactJS, Redux , Hooks
+- **Database:** Firebase
 
 ## Deployment
 
@@ -37,9 +25,8 @@ Deployed on Vercel
 
 Link to Website : https://rechats.vercel.app/
 
-
-
 ## Running Locally
+
 ### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
