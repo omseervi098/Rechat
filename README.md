@@ -7,23 +7,24 @@
 
 
 
-
 ## Login
 
-To login 
+To login
 try email :
-*  ```test1@gmail.com```
-*  ```test2@gmail.com```
-*  ```test3@gmail.com```
-*  ```test4@gmail.com```
-*  ```test5@gmail.com```
-and password as ```123456```
+
+- `test1@gmail.com` Name: Bill
+- `test2@gmail.com` Name: Cleo
+- `test3@gmail.com` Name: Rohan
+- `test4@gmail.com` Name: Ryan
+- `test5@gmail.com` Name: Alice
+  and password as `123456`
 
 
+## How it is stored on Database ?
 
-
-
-
+- `users` to store detail of each user `{displayName,email,photoURL,uniqueID}`
+- `userChats` to store detail of each user conversation with other user  `uid=[{combinedID,date,userInfo={displayName,photoURL,uid}}]`
+- `chats` to store text messages between two users `combinedID={messages=[{text,SenderID,date}]}`
 ## Tech Stack
 
 * **Client:** ReactJS, Redux , Hooks
