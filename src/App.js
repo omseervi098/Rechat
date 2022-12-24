@@ -6,14 +6,16 @@ import Layout from "./pages/Layout";
 import Login from "./pages/Login";
 import { AuthContext } from "./context/Auth";
 function App() {
+  //State to control loader
   const [loading, setLoading] = useState(false);
+  //Get current user from context
   const { currentUser } = useContext(AuthContext);
-
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/">
+            {/* Route for login and dashboard page */}
             <Route
               index
               element={

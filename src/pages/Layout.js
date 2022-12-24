@@ -20,6 +20,7 @@ function Layout(props) {
         />
       </div>
       <div className="container">
+        {/* Dashboard consist of two part left sidebar and right side chat */}
         <Sidebar />
         <Chat />
       </div>

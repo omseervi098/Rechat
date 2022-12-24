@@ -61,6 +61,7 @@ code {
   overflow: hidden;
   box-shadow: 0 0 10px 0px #ffffffa2;
 }
+/* Sidebar component */
 .layout .sidebar {
   flex: 1;
 
@@ -79,7 +80,7 @@ code {
   justify-content: space-between;
   color: white;
 }
-
+/* Navbar component */
 .logo {
   font-size: 20px;
   font-weight: 600;
@@ -108,6 +109,7 @@ code {
   align-items: center;
   cursor: pointer;
 }
+/* Search component  */
 .sidebar > .search {
   border-bottom: 1px solid rgb(255, 255, 255);
 }
@@ -124,7 +126,7 @@ code {
 .search_container > input::placeholder {
   color: rgb(255, 255, 255);
 }
-
+/* chat component */
 .userChat {
   padding: 10px;
   display: flex;
@@ -180,12 +182,13 @@ code {
   padding-top: 6px;
   cursor: pointer;
 }
-
+/* Messages component */
 .messages {
   padding: 10px;
   height: calc(100% - 50px - 50px);
   overflow: scroll;
 }
+/* Input component */
 .send-message {
   height: 50px;
   background-color: rgb(255, 255, 255);
@@ -199,7 +202,6 @@ code {
   background-color: transparent;
   border: none;
   outline: none;
-
   padding: 10px;
 }
 .send-message > input::placeholder {
@@ -239,6 +241,7 @@ code {
   gap: 10px;
   align-items: center;
 }
+/* single message component */
 .messages > .message {
   display: flex;
   gap: 10px;
@@ -289,7 +292,7 @@ code {
   border-radius: 10px 0px 10px 10px;
   font-size: 1.1rem;
 }
-/* laptop */
+/* Responsiveness for large devices */
 @media screen and (max-width: 1024px) {
   .logo {
     font-size: 1.5rem;
@@ -308,6 +311,7 @@ code {
     font-size: 1rem;
   }
 }
+/* Responsiveness for medium devices */
 @media screen and (max-width: 760px) {
   .messageInfo img {
     height: 40px;
@@ -320,6 +324,7 @@ code {
     font-size: 0.8rem;
   }
 }
+/* Responsiveness for small devices */
 @media screen and (max-width: 570px) {
   .userChatInfo {
     display: none;
@@ -351,6 +356,7 @@ code {
     font-size: 0.8rem;
   }
 }
+/* Responsiveness for extra small devices */
 @media screen and (max-width: 430px) {
   .user > button {
     margin-left: 10px;

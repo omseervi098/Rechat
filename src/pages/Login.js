@@ -1,21 +1,25 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-
 import { auth } from "../firebase";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 function Login(props) {
   const navigate = useNavigate();
+  //State to control error
   const [error, setError] = useState("");
+  //handling login
   const handleSubmit = async (e) => {
     props.setLoading(true);
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     try {
+      //Sign in using firebase auth
       await signInWithEmailAndPassword(auth, email, password);
       props.setLoading(false);
+      //Redirect to dashboard page
       navigate("/");
     } catch (error) {
+      //If error occurs than set error state
       props.setLoading(false);
       setError("Invalid Credentials");
       console.log(error);
@@ -40,10 +44,12 @@ function Login(props) {
       </div>
 
       {props.loading ? (
+        // If loading is true than show spinner
         <div className="spinner-border text-warning" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
       ) : (
+        // Else show login form
         <form className="loginform w-100" onSubmit={handleSubmit}>
           <h1 className="text-center text-white mb-4">ReChat</h1>
 
@@ -98,6 +104,7 @@ function Login(props) {
             </p>
           </div>
           {error && setTimeout(() => setError(""), 1500) && (
+            // If error occurs than show error message
             <div className="alert alert-danger">{error}</div>
           )}
         </form>

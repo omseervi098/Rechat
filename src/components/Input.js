@@ -11,10 +11,13 @@ import { ChatContext } from "../context/Chat";
 import { db } from "../firebase";
 import { v4 as uuid } from "uuid";
 function Input() {
-  const [text, setText] = useState("");
-  const { currentUser } = useContext(AuthContext);
-  const { data } = useContext(ChatContext);
+  // This is input component which will take input from user and send message
+  const [text, setText] = useState(""); //text state to store text
+  const { currentUser } = useContext(AuthContext); //currentUser is user state fetched from AuthContext
+  const { data } = useContext(ChatContext); //data is data state fetched from ChatContext
   const handleSend = async () => {
+    //send message
+    //update messages in chats collection
     await updateDoc(doc(db, "chats", data.chatId), {
       messages: arrayUnion({
         id: uuid(),
@@ -23,6 +26,7 @@ function Input() {
         date: Timestamp.now(),
       }),
     });
+    //update lastMessage and date in userChats collection of current user and other user
     await updateDoc(doc(db, "userChats", currentUser.uid), {
       [data.chatId + ".lastMessage"]: {
         text,
@@ -35,6 +39,7 @@ function Input() {
       },
       [data.chatId + ".date"]: serverTimestamp(),
     });
+    //reset text state
     setText("");
   };
   return (
