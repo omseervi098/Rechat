@@ -2,6 +2,7 @@
   "name": "rechat",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://omseervi098.github.io/rechats",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
