@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "homepage": "https://omseervi098.github.io/rechats",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
@@ -13,6 +15,7 @@
     "bootstrap": "^5.2.3",
     "firebase": "^9.15.0",
     "fontawesome": "^5.6.3",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
